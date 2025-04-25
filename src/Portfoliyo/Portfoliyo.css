@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    position: relative;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar a::before,
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #00bcd4;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a::before {
+    left: 0;
+    bottom: 0;
+}
+
+.navbar a::after {
+    right: 0;
+    top: 0;
+}
+
+.navbar a:hover {
+    color: #00bcd4;
+}
+
+.navbar a:hover::before,
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+/* Hero Section */
+.hero_section {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.text_container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.lg_text {
+    font-size: 2.5rem;
+    color: #00bcd4;
+}
+
+/* Black Box Section */
+.black_box {
+    background-color: #333;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.black_box span {
+    color: #00bcd4;
+}
+
+/* Work Section */
+.Work {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.parent > div {
+    background-color: #fafafa;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.parent > div:hover {
+    transform: translateY(-5px);
+}
+
+.parent h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Bottom Section */
+.bottom_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #222;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.contact, .about {
+    flex: 1;
+    min-width: 250px;
+    margin: 1rem;
+}
+
+.social, .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #00bcd4;
+    margin: 1rem 0;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .parent {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .parent {
+        grid-template-columns: 1fr;
+    }
+
+    .lg_text {
+        font-size: 2rem;
+    }
+
+    .hero_section {
+        padding: 3rem 1rem;
+    }
+
+    .black_box, .Work, .bottom_section {
+        padding: 2rem 1rem;
+    }
+}
